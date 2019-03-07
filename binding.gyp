@@ -40,8 +40,7 @@
           ],
         "ldflags": [
           "-L<@(module_root_dir)/build/Release",
-          "-Wl,-rpath,<@(module_root_dir)/build/Release",
-          "--enable-new-dtags"
+          "-Wl,-rpath,'$$ORIGIN'",
         ]
       },
       "copies": [

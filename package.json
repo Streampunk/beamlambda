@@ -1,6 +1,6 @@
 {
   "name": "beamlambda",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "Node.js native bindings to FFmpeg for AWS lambda functions.",
   "main": "index.js",
   "scripts": {
