@@ -1,10 +1,9 @@
 {
-  "name": "beamcoder",
+  "name": "beamlambda",
   "version": "0.1.12",
-  "description": "Node.js native bindings to FFmpeg.",
+  "description": "Node.js native bindings to FFmpeg for AWS lambda functions.",
   "main": "index.js",
   "scripts": {
-    "preinstall": "node install_ffmpeg.js",
     "install": "node-gyp rebuild",
     "test": "tape test/*.js",
     "lint": "eslint **/*.js",
@@ -23,7 +22,8 @@
     "sound",
     "encode",
     "decode",
-    "transcode"
+    "transcode",
+    "lambda"
   ],
   "author": "Streampunk Media Ltd",
   "license": "GPL-3.0-or-later",
