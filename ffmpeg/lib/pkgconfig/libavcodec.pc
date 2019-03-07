@@ -1,0 +1,14 @@
+prefix=/home/ec2-user/ffmpeg_build
+exec_prefix=${prefix}
+libdir=/home/ec2-user/ffmpeg_build/lib
+includedir=/home/ec2-user/ffmpeg_build/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.35.100
+Requires: 
+Requires.private: libswresample >= 3.3.100, libavutil >= 56.22.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -L/home/ec2-user/ffmpeg_build/lib -lvpx -lm -lpthread -L/home/ec2-user/ffmpeg_build/lib -lvpx -lm -lpthread -L/home/ec2-user/ffmpeg_build/lib -lvpx -lm -lpthread -L/home/ec2-user/ffmpeg_build/lib -lvpx -lm -lpthread -pthread -lm -lz -L/home/ec2-user/ffmpeg_build/lib64 -laom -lm -lpthread -L/home/ec2-user/ffmpeg_build/lib -lfdk-aac -lm -lmp3lame -lm -L/home/ec2-user/ffmpeg_build/lib -lopus -lm -L/home/ec2-user/ffmpeg_build/lib -lx264 -lpthread -lm -ldl -L/home/ec2-user/ffmpeg_build/lib -lx265 -lstdc++ -lm -lrt -ldl
+Cflags: -I${includedir}

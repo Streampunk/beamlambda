@@ -1,0 +1,14 @@
+prefix=/home/ec2-user/ffmpeg_build
+exec_prefix=${prefix}
+libdir=/home/ec2-user/ffmpeg_build/lib
+includedir=/home/ec2-user/ffmpeg_build/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 56.22.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -pthread -lm
+Cflags: -I${includedir}
