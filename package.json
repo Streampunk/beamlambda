@@ -1,6 +1,6 @@
 {
   "name": "beamlambda",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "description": "Node.js native bindings to FFmpeg as an AWS Lambda layer.",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Streampunk/beamcoder.git"
+    "url": "git+https://github.com/Streampunk/beamlambda.git"
   },
   "keywords": [
     "FFmpeg",
@@ -30,9 +30,9 @@
   "author": "Streampunk Media Ltd",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/Streampunk/beamcoder/issues"
+    "url": "https://github.com/Streampunk/beamlambda/issues"
   },
-  "homepage": "https://github.com/Streampunk/beamcoder#readme",
+  "homepage": "https://github.com/Streampunk/beamlambda#readme",
   "dependencies": {
     "bindings": "^1.4.0",
     "koa": "^2.7.0",
