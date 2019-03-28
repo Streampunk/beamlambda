@@ -10,7 +10,63 @@ This package provides a lambda layer that can be included in your serverless lam
 
 ### Example
 
-__TODO__ - create an intriguing beam lambda example
+Get FFmpeg format details for any media file on the Internet.
+
+Create a lambda function called `beam-format` as follows:
+
+```javascript
+const beamcoder = require('beamlambda');
+
+exports.handler = async (event) => {
+    let fmt = await beamcoder.demuxer(event.url);
+    return fmt.toJSON();
+};
+```
+
+Add beam lambda as a layer [as described below](#aws-layer) by selecting _Provide a layer version ARN_ on the _Layer selection_ page.
+
+Create a test event as follows:
+
+```JSON
+{
+  "url": "https://raw.githubusercontent.com/Streampunk/beamlambda/HEAD/images/beamlambda_small.jpg"
+}
+```
+
+Change the `url` for any media file you like, such as an MP4 file.
+
+Run the test. A result similar to the following will be produced:
+
+```JSON
+{
+  "type": "demuxer",
+  "iformat": "image2",
+  "streams": [
+    {
+      "type": "Stream",
+      "index": 0,
+      "time_base": [ 1, 25 ],
+      "start_time": 0,
+      "duration": 1,
+      "codecpar": {
+        "type": "CodecParameters",
+        "codec_type": "video",
+        "codec_id": 7,
+        "name": "mjpeg",
+        "format": "yuvj420p",
+        "bits_per_raw_sample": 8,
+        "width": 369,
+        "height": 243,
+        "color_range": "pc",
+        "color_space": "bt470bg",
+        "chroma_location": "center"
+      }
+    }
+  ],
+  "url": "https://raw.githubusercontent.com/Streampunk/beamlambda/HEAD/images/beamlambda_small.jpg",
+  "duration": 40000
+}
+```
 
 ### Aerostat
 
