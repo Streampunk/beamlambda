@@ -1,7 +1,7 @@
 {
   "name": "beamlambda",
-  "version": "0.1.16",
-  "description": "Node.js native bindings to FFmpeg for AWS lambda functions.",
+  "version": "0.1.17",
+  "description": "Node.js native bindings to FFmpeg as an AWS Lambda layer.",
   "main": "index.js",
   "scripts": {
     "install": "node-gyp rebuild",
@@ -24,6 +24,7 @@
     "decode",
     "transcode",
     "lambda",
+    "layer",
     "N-API"
   ],
   "author": "Streampunk Media Ltd",
