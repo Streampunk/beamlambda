@@ -119,6 +119,10 @@ Beam lambda can be installed on Linux and make use of the self-contained FFmpeg 
 
     const beamcoder = require('beamlambda');
 
+## API
+
+Please see the documentation for [`beamcoder`](https://www.npmjs.com/package/beamcoder#usage).
+
 ## License
 
 This project is licensed under the GNU General Public License, version 3 or later. Copyright (C) 2019, Streampunk Media Ltd.
